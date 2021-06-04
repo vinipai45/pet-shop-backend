@@ -32,7 +32,7 @@ router.param("categoryId", getCategoryById);
 
 //all routes
 // create-route
-router.post("/product/create/:userId", isSignedIn, createProduct);
+router.post("/product/create/:userId", isSignedIn, isAdmin, createProduct);
 
 //read-routes
 router.get("/product/:productId", getProduct);
